@@ -40,8 +40,25 @@ public:
         }
     }
 
+    void setArrayLinear() {
+        cout << "Input all elements of list (Between -100 to 100) seperated by spaces" << endl;
+        for(i = 0; i < n; i++) {
+            cin >> array[i];
+            // while(true) {
+            //     if(array[i] < -100 || n > 100) {
+            //         cout << "Input valid list of elements (Between -100 to 100)" << endl;
+            //         cin >> array[i];
+            //     }
+            // }
+        }
+    }
+
     int* getArray() {
         return array;
+    }
+
+    int getArrayElement(int i) {
+        return array[i];
     }
     
     void printArray() {
@@ -60,7 +77,7 @@ int main() {
 dynaList list;
 
 list.setSize();
-list.setArray();
+list.setArrayLinear();
 list.printArray();
 list.delArray();
 
